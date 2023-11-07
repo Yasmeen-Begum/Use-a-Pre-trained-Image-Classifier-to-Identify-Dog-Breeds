@@ -1,36 +1,0 @@
-3
-
-„JeÈ  ã               @   s   d d„ Z dS )c             C   s¶  ddddddddddddœ}t | ƒ|d< xÜ| D ]Ô}| | d dkrR|d  d7  < | | d dkrr|d  d7  < | | d dkr¢| | d	 dkr¢|d
-  d7  < | | d dkrÒ| | d	 dkrÒ|d  d7  < | | d dkoð| | d dkr.|d  d7  < q.W |d |d  |d
-< |d dkr@|d |d  d |d< |d dkrf|d
- |d  d |d< |d dkrŒ|d |d  d |d< |d
- dkr²|d |d
-  d |d< |S )a8  
-    Calculates statistics of the results of the program run using classifier's model 
-    architecture to classifying pet images. Then puts the results statistics in a 
-    dictionary (results_stats_dic) so that it's returned for printing as to help
-    the user to determine the 'best' model for classifying images. Note that 
-    the statistics calculated as the results are either percentages or counts.
-    Parameters:
-      results_dic - Dictionary with key as image filename and value as a List 
-             (index)idx 0 = pet image label (string)
-                    idx 1 = classifier label (string)
-                    idx 2 = 1/0 (int)  where 1 = match between pet image and 
-                            classifer labels and 0 = no match between labels
-                    idx 3 = 1/0 (int)  where 1 = pet image 'is-a' dog and 
-                            0 = pet Image 'is-NOT-a' dog. 
-                    idx 4 = 1/0 (int)  where 1 = Classifier classifies image 
-                            'as-a' dog and 0 = Classifier classifies image  
-                            'as-NOT-a' dog.
-    Returns:
-     results_stats_dic - Dictionary that contains the results statistics (either
-                    a percentage or a count) where the key is the statistic's 
-                     name (starting with 'pct' for percentage or 'n' for count)
-                     and the value is the statistic's value. See comments above
-                     and the previous topic Calculating Results in the class for details
-                     on how to calculate the counts and statistics.
-    é    )Ún_imagesÚ
-n_dogs_imgÚ
-n_notdogs_imgÚn_matchÚn_correct_dogsÚn_correct_notdogsÚn_correct_breedÚ	pct_matchÚpct_correct_dogsÚpct_correct_breedÚpct_correct_notdogsr   é   é   r   é   r   é   r   r   r   r   éd   r	   r
-   r   r   )Úlen)Úresults_dicÚresults_stats_dicÚkey© r   ú+/workspace/home/calculates_results_stats.pyÚcalculates_results_stats-   s:     
-   r   N)r   r   r   r   r   Ú<module>-   s    
