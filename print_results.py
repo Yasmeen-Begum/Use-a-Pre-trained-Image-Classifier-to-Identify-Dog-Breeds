@@ -3,8 +3,8 @@
 # */AIPND-revision/intropyproject-classify-pet-images/print_results.py
 #                                                                             
 # PROGRAMMER: YASMEEN BEGUM 
-# DATE CREATED:01-11-2023
-# REVISED DATE: 01-11-2023
+# DATE CREATED:05-11-2023
+# REVISED DATE: 05-11-2023
 # PURPOSE: Create a function print_results that prints the results statistics
 #          from the results statistics dictionary (results_stats_dic). It 
 #          should also allow the user to be able to print out cases of misclassified
@@ -77,7 +77,7 @@ def print_results(results_dic, results_stats_dic, model,
     # IF print_incorrect_dogs == True AND there were images incorrectly 
     # classified as dogs or vice versa - print out these cases
     if print_incorrect_dogs and (results_stats_dic['n_correct_dogs'] + results_stats_dic['n_correct_notdogs'] != results_stats_dic['n_images']):
-        print("\n\n*** Incorrectly Classified Dogs:")
+        print("\nINCORRECT Dog/NOT Dog Assignments:")
         for key in results_dic:
             if sum(results_dic[key][3:]) == 1:
                 print("Pet Image Label: {:>26}   Classifier Label: {:>30}".format(results_dic[key][0], results_dic[key][1]))
