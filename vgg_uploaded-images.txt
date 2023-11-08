@@ -5,20 +5,20 @@ Command Line Arguments:
 
 Pet Image Label Dictionary has 4 key-value pairs.
 Below are 4 of them:
- 1 key:                     Dog_02.jpg  label:                        dog
- 2 key:                     Cow_01.jpg  label:                        cow
- 3 key:                     Dog_01.jpg  label:                        dog
+ 1 key:                     Dog_01.jpg  label:                        dog
+ 2 key:                   Table_03.jpg  label:                      table
+ 3 key:                     Dog_02.jpg  label:                        dog
  4 key:                    Goat_04.jpg  label:                       goat
 
      MATCH:
+
+                  Table_03.jpg: 
+Real:                      table   Classifier:            dining table, board
 
                     Dog_02.jpg: 
 Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
 
  NOT A MATCH:
-
-                    Cow_01.jpg: 
-Real:                        cow   Classifier: brown bear, bruin, ursus arctos
 
                     Dog_01.jpg: 
 Real:                        dog   Classifier:             labrador retriever
@@ -26,19 +26,19 @@ Real:                        dog   Classifier:             labrador retriever
                    Goat_04.jpg: 
 Real:                       goat   Classifier:                       ram, tup
 
-# Total Images 4 # Matches: 1 # NOT Matches: 3
+# Total Images 4 # Matches: 2 # NOT Matches: 2
 
      MATCH:
+
+                  Table_03.jpg: 
+Real:                      table   Classifier:            dining table, board  
+PetLabelDog: 0  ClassLabelDog: 0
 
                     Dog_02.jpg: 
 Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
 PetLabelDog: 1  ClassLabelDog: 1
 
  NOT A MATCH:
-
-                    Cow_01.jpg: 
-Real:                        cow   Classifier: brown bear, bruin, ursus arctos  
-PetLabelDog: 0  ClassLabelDog: 0
 
                     Dog_01.jpg: 
 Real:                        dog   Classifier:             labrador retriever  
@@ -48,7 +48,7 @@ PetLabelDog: 1  ClassLabelDog: 1
 Real:                       goat   Classifier:                       ram, tup  
 PetLabelDog: 0  ClassLabelDog: 0
 
-# Total Images 4 # Matches: 1 # NOT Matches: 3
+# Total Images 4 # Matches: 2 # NOT Matches: 2
 
  ** Statistics from calculates_results_stats() function:
 N Images:  4  N Dog Images:  2  N NotDog Images:  2 
@@ -66,7 +66,7 @@ N Not-Dog Images    :   2
 
 
 *** Summary Statistics for CNN Model Architecture VGG ***
-pct_match           : 25.00
+pct_match           : 50.00
 pct_correct_dogs    : 100.00
 pct_correct_breed   : 50.00
 pct_correct_notdogs : 100.00
@@ -74,4 +74,4 @@ pct_correct_notdogs : 100.00
 INCORRECT Dog Breed Assignment:
 Pet Image Label:                        dog   Classifier Label:             labrador retriever
 
-** Total Elapsed Runtime: 0:0:7
+** Total Elapsed Runtime: 0:0:8
